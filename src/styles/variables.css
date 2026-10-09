@@ -1,0 +1,42 @@
+:root {
+  --c-primary: #155fdc;
+  --c-primary-light: #e9f1ff;
+  /* 胶囊按钮用的主色渐变：浅色在上、深色在下 */
+  --c-primary-gradient: linear-gradient(180deg, #759cff 0%, #155fdc 100%);
+  /* 主色渐变的浅色端，给序号等小色块用 */
+  --c-primary-soft: #759cff;
+  --c-primary-shadow: rgba(21, 95, 220, 0.28);
+  --c-success: #07c160;
+  --c-warning: #ff9d00;
+  --c-danger: #fa5151;
+
+  --text-1: #1a1a1a;
+  --text-2: #666666;
+  --text-3: #999999;
+  --text-tab: #9a9a9a;
+
+  --bg-card: #ffffff;
+  --border-color: #ebedf0;
+
+  /* 卡片右上角序号底色：跟胶囊相反，浅色在下 */
+  --c-badge: linear-gradient(180deg, #155fdc 0%, #759cff 100%);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  --gap: 12px;
+  /* 页面底部留白（在安全区之外再加的一段，避免最后一行贴着 App 底部导航） */
+  --page-bottom-padding: 60px;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* Android：状态栏留白由 App 负责，H5 不再重复留（否则切换栏上方会多出一块高度） */
+:root.is-android {
+  --safe-top: 0px;
+}
